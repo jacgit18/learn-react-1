@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import BoardSwitcher from './BoardSwitcher';
+import './index.css'
 
-ReactDOM.render(
-  <>
-  {/* 
+/* {} brackets for comments when inside reactDom.render
   need to wrap elements can be div or enpty brackets 
   also read from bottom up for react code dom is document 
   object model basically the hmtl tag higharcy react has 
@@ -20,10 +20,69 @@ ReactDOM.render(
    to strandardize things. react can be reused to build 
    desktop apps and mobile like slack desktop app.
   
-  */}
-    <h1>Hello World!</h1>
-    <h1>Hi Again</h1>
+  */ 
+// props is amutable meaning it cant be changed once it
+// is been declared in one part of code
+//  function Student(props) {
+//  props.name= "kiing"; you will get error
+//   return <div>- {props.name}, attends {props.college} </div>;
+// }
 
-  </>,
+// or do deconstruction use className for css
+// this is still all javascript(JSX)
+// function Student({name, college}) {
+//   return <div className="red-text">- {name}, attends {college} </div>;
+// }
+//another component call
+
+// this is a function call
+// Student({});
+// not function call, declaring element to component
+// <Student name="jl"/>
+// function Welcome() {
+//   return (
+//     <div>
+//       <h1>Welcome CTP Class</h1>
+//       <p>Who is in class?</p>
+//       <Student name="John" college="NYU" /> 
+//       <Student name="Jack" college="NYCT" /> 
+//       <Student name="Jeff" college="BC" /> 
+
+//     </div>
+//   );
+// }
+/* 
+  Welcome is a componet being called in render
+  it is thr function above must be capital and 
+  react is top bottom
+  props can be passed here
+    <Welcome secret="foo" />,
+
+  */
+// ReactDOM.render(
+  
+//   <Welcome />,
+//   document.getElementById("root")
+// );
+
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <p>The button has been clicked 0 times</p>
+        <button>Click me!!!</button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById("root")
+);
+
+ReactDOM.render(
+  <BoardSwitcher numBoards={3} />,
   document.getElementById("root")
 );
