@@ -1,10 +1,11 @@
 import React from 'react';
 
 class Board extends React.Component {
+  
   render() {
     let className = "board";
     if (this.props.selected) {
-      className += " selected";
+      className += " selected";   
     }
     return (
       <div className={className}>
@@ -27,7 +28,7 @@ class BoardSwitcher extends React.Component {
     return (
       <div>
         <div className="boards">{boards}</div>
-        <button>Toggle</button>
+        <button >Toggle</button>
       </div>
     );
   }

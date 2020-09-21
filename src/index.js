@@ -67,11 +67,17 @@ import './index.css'
 
 
 class App extends React.Component {
+  handleClick() {
+    this.setState(state => ({
+      isToggleOn: !state.isToggleOn
+    }));
+  }
   render() {
     return (
       <div>
         <p>The button has been clicked 0 times</p>
-        <button>Click me!!!</button>
+        <button onClick={this.handleClick}>
+        {this.state.isToggleOn ? 'ON' : 'OFF'}</button>
       </div>
     );
   }
