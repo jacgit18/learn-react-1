@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+// rename file to jsx baiscally a react javascript file
 class Board extends React.Component {
   
   render() {
