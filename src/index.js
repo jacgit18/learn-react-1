@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-//import BoardSwitcher from './BoardSwitcher';
 import './index.css'
 
 /* {} brackets for comments when inside reactDom.render
@@ -54,28 +53,6 @@ function Welcome() {
 }
 
 
-
-// class App extends React.Component {
- 
-//   render() {
-//     return (
-//       <div>
-//         <p>The button has been clicked 0 times</p>
-       
-//       </div>
-//     );
-//   }
-// }
-
-// ReactDOM.render(
-//   <App />,
-//   document.getElementById("root")
-// );
-
-// ReactDOM.render(
-//   <BoardSwitcher numBoards={3} />,
-//   document.getElementById("root")
-// );
 
 /* 
   Welcome is a componet being called in render
